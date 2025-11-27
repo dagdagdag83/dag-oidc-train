@@ -9,7 +9,6 @@ const sections = [
     { id: 'mle', label: 'Finnish Weirdness' },
     { id: 'par', label: 'PAR' },
     { id: 'sro', label: 'SRO' },
-    { id: 'oauth', label: 'APIs & OAuth' },
     { id: 'summary', label: 'Debrief' },
 ];
 
@@ -53,12 +52,19 @@ const Navbar: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex items-center justify-between">
                     {/* Logo / Title */}
-                    <div className="flex items-center gap-2">
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="flex items-center gap-2 cursor-pointer no-underline"
+                    >
                         <div className={`w-2 h-2 bg-cyan-500 rounded-full animate-pulse shadow-[0_0_10px_#00f3ff]`}></div>
                         <div className={`font-bold text-cyan-400 tracking-[0.2em] text-sm md:text-base ${scrolled ? 'text-shadow-neon' : ''}`}>
                             OIDC<span className="text-white">TRAINING</span>
                         </div>
-                    </div>
+                    </a>
 
                     {/* Navigation Links */}
                     <div className="flex gap-2 overflow-x-auto no-scrollbar mask-fade-sides md:mask-none py-1">
