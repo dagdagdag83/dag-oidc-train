@@ -9,6 +9,8 @@ import {
 import Section from './Section';
 import Card from './Card';
 import TerminalBox from './TerminalBox';
+import Code from './Code';
+
 
 const OAuthApis: React.FC = () => {
     const [oauthStep, setOauthStep] = useState(0);
@@ -57,7 +59,7 @@ const OAuthApis: React.FC = () => {
                                     <span className="font-bold text-sm text-green-300">1. Request Token</span>
                                     <Server size={14} className="text-green-500" />
                                 </div>
-                                <p className="text-xs text-gray-400">POST /connect/token with <code>client_credentials</code> grant type.</p>
+                                <p className="text-xs text-gray-400">POST /connect/token with <Code>client_credentials</Code> grant type.</p>
                             </div>
 
                             <div
@@ -79,7 +81,7 @@ const OAuthApis: React.FC = () => {
                                     <span className="font-bold text-sm text-green-300">3. Call API</span>
                                     <Zap size={14} className="text-green-500" />
                                 </div>
-                                <p className="text-xs text-gray-400">Use token in Header: <code>Authorization: Bearer &lt;token&gt;</code></p>
+                                <p className="text-xs text-gray-400">Use token in Header: <Code>Authorization: Bearer &lt;token&gt;</Code></p>
                             </div>
                         </div>
 

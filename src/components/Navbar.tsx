@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react';
 const sections = [
     { id: 'hub', label: 'Architecture' },
     { id: 'happypath', label: 'OIDC Flow' },
-    { id: 'par', label: 'PAR' },
+    { id: 'jwt', label: 'JWT' },
+    { id: 'scopes', label: 'Scopes & Claims' },
     { id: 'crypto', label: 'Crypto Core' },
     { id: 'mle', label: 'Finnish Weirdness' },
-    { id: 'parvssro', label: 'PAR vs SRO' },
+    { id: 'par', label: 'PAR' },
+    { id: 'sro', label: 'SRO' },
     { id: 'oauth', label: 'APIs & OAuth' },
     { id: 'summary', label: 'Debrief' },
 ];

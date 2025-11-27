@@ -3,7 +3,7 @@ import React from 'react';
 interface SectionProps {
     title: string;
     children: React.ReactNode;
-    color?: "blue" | "pink" | "yellow" | "green" | "red";
+    color?: "blue" | "pink" | "yellow" | "green" | "red" | "purple";
     id: string;
 }
 
@@ -13,6 +13,7 @@ const Section: React.FC<SectionProps> = ({ title, children, color = "blue", id }
     if (color === 'yellow') textClass = 'neon-text-yellow';
     if (color === 'green') textClass = 'neon-text-green';
     if (color === 'red') textClass = 'neon-text-red';
+    if (color === 'purple') textClass = 'neon-text-purple';
 
     return (
         <div id={id} className="min-h-screen flex flex-col justify-center items-center py-20 px-4 relative border-b border-gray-800 scroll-mt-24">
