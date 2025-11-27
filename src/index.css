@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050510;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.neon-text-blue {
+  text-shadow: 0 0 5px #00f3ff, 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+  color: #e0faff;
+}
+
+.neon-text-pink {
+  text-shadow: 0 0 5px #ec4899, 0 0 10px #ec4899;
+  color: #fce7f3;
+}
+
+.neon-text-yellow {
+  text-shadow: 0 0 5px #eab308, 0 0 10px #eab308;
+  color: #fef08a;
+}
+
+.neon-text-green {
+  text-shadow: 0 0 5px #22c55e, 0 0 10px #22c55e;
+  color: #bbf7d0;
+}
+
+.neon-text-red {
+  text-shadow: 0 0 5px #ef4444, 0 0 10px #ef4444;
+  color: #fca5a5;
+}
+
+.neon-border-blue {
+  box-shadow: 0 0 5px #00f3ff, inset 0 0 5px #00f3ff;
+  border: 1px solid #00f3ff;
+}
+
+.grid-bg {
+  background-color: #050510;
+  background-image: 
+    linear-gradient(rgba(0, 243, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center bottom;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  min-height: 100vh;
+  width: 100%;
+  color: #e0faff;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.scanline {
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255, 255, 255, 0.03) 50%, rgba(0,0,0,0) 100%);
+  opacity: 0.1;
+  position: absolute;
+  bottom: 100%;
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scanline {
+  0% { bottom: 100%; }
+  100% { bottom: -100px; }
+}
+
+/* TRON ENTER ANIMATION STYLES */
+.tron-entry-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+}
+
+.tron-entry-active {
+  animation: flash-bang 1.5s forwards;
+}
+
+.tron-tunnel {
+  position: absolute;
+  width: 200vw;
+  height: 200vh;
+  background: 
+    repeating-linear-gradient(90deg, transparent 0, transparent 40px, #00f3ff 40px, #00f3ff 42px),
+    repeating-linear-gradient(0deg, transparent 0, transparent 40px, #00f3ff 40px, #00f3ff 42px);
+  transform-style: preserve-3d;
+  transform: rotateX(90deg) translateZ(-1000px);
+  opacity: 0;
+}
+
+.tron-entry-active .tron-tunnel {
+  animation: tunnel-rush 1s cubic-bezier(0.1, 0.7, 1.0, 0.1) forwards;
+}
+
+.tron-bike-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  height: 0;
+  background: #fff;
+  box-shadow: 0 0 20px #00f3ff, 0 0 40px #00f3ff;
+  transform: translateX(-50%);
+}
+
+.tron-entry-active .tron-bike-line {
+  animation: light-cycle-trail 1.5s ease-out forwards;
+}
+
+@keyframes flash-bang {
+  0% { opacity: 0; }
+  10% { opacity: 1; background: white; }
+  20% { background: #050510; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes tunnel-rush {
+  0% { transform: rotateX(90deg) translateZ(-2000px); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: rotateX(90deg) translateZ(1000px); opacity: 0; }
+}
+
+@keyframes light-cycle-trail {
+  0% { height: 0; bottom: 0; opacity: 0;}
+  20% { height: 100vh; opacity: 1; }
+  100% { height: 100vh; opacity: 0; width: 100vw; }
+}
+
+.cyber-box {
+  background: rgba(0, 10, 20, 0.8);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cyber-box:hover {
+  background: rgba(0, 20, 40, 0.9);
+}
+
+.cyber-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 10px; height: 10px;
+  border-top: 2px solid #00f3ff;
+  border-left: 2px solid #00f3ff;
+}
+.cyber-box::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 10px; height: 10px;
+  border-bottom: 2px solid #00f3ff;
+  border-right: 2px solid #00f3ff;
+}
+
+.key-icon {
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.typing-cursor::after {
+  content: '▋';
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
