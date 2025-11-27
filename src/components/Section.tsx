@@ -15,7 +15,7 @@ const Section: React.FC<SectionProps> = ({ title, children, color = "blue", id }
     if (color === 'red') textClass = 'neon-text-red';
 
     return (
-        <div id={id} className="min-h-screen flex flex-col justify-center items-center py-20 px-4 relative border-b border-gray-800">
+        <div id={id} className="min-h-screen flex flex-col justify-center items-center py-20 px-4 relative border-b border-gray-800 scroll-mt-24">
             <div className={`text-4xl md:text-6xl mb-12 font-bold tracking-widest text-center ${textClass}`}>
                 {title}
             </div>
