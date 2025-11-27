@@ -463,23 +463,40 @@ export default function OidcTraining() {
                                         <Key size={12} className="text-red-500 fill-current" />
                                         <span className="text-gray-400">Client Private Key</span>
                                     </div>
+                                    <div className="flex items-center gap-2 bg-black/40 px-2 py-1 rounded border border-gray-700">
+                                        <Key size={12} className="text-green-500 fill-current" />
+                                        <span className="text-gray-400">Signicat Public Key</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* Middle Action */}
-                            <div className="flex-1 text-center relative h-32 flex items-center justify-center">
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className={`w-full h-1 bg-gradient-to-r ${cryptoDir === 'client_to_signicat' ? 'from-pink-500 to-cyan-500' : 'from-cyan-500 to-pink-500'}`}></div>
+                            {/* Animation Arrows */}
+                            <div className="flex-1 text-center relative h-32 flex flex-col justify-center">
+                                <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${cryptoDir === 'signicat_to_client' ? 'rotate-180' : ''}`}>
+                                    <ArrowRight size={32} className={cryptoDir === 'signicat_to_client' ? 'text-cyan-500' : 'text-pink-500'} />
                                 </div>
-                                <div className="z-10 bg-black border border-gray-600 p-4 rounded shadow-2xl">
-                                    <div className="text-xs text-gray-400 mb-1 uppercase tracking-widest">Action</div>
-                                    <div className="font-bold text-white mb-2">
-                                        {cryptoDir === 'client_to_signicat' ? 'Client Authenticating to Signicat' : 'Signicat Sending Token to Client'}
+
+                                <div className="space-y-4 z-10">
+                                    {/* Signing Action */}
+                                    <div className="flex items-center justify-center gap-2 text-sm">
+                                        <span className="font-bold text-yellow-500">SIGN:</span>
+                                        {cryptoDir === 'signicat_to_client' ? (
+                                            <span className="text-cyan-300">Signicat Private Key</span>
+                                        ) : (
+                                            <span className="text-pink-300">Client Private Key</span>
+                                        )}
+                                        <PenTool size={14} className="text-yellow-500" />
                                     </div>
-                                    <div className="flex gap-2 justify-center">
-                                        <span className="px-2 py-1 bg-yellow-900/50 border border-yellow-500/50 rounded text-yellow-300 text-xs">
-                                            {cryptoDir === 'client_to_signicat' ? 'Signed with Client Priv Key' : 'Signed with Signicat Priv Key'}
-                                        </span>
+
+                                    {/* Encryption Action */}
+                                    <div className="flex items-center justify-center gap-2 text-sm">
+                                        <span className="font-bold text-yellow-500">ENCRYPT:</span>
+                                        {cryptoDir === 'signicat_to_client' ? (
+                                            <span className="text-pink-300">Client Public Key</span>
+                                        ) : (
+                                            <span className="text-cyan-300">Signicat Public Key</span>
+                                        )}
+                                        <Lock size={14} className="text-yellow-500" />
                                     </div>
                                 </div>
                             </div>
@@ -495,8 +512,13 @@ export default function OidcTraining() {
                                         <Key size={12} className="text-red-500 fill-current" />
                                         <span className="text-gray-400">Signicat Private Key</span>
                                     </div>
+                                    <div className="flex items-center gap-2 bg-black/40 px-2 py-1 rounded border border-gray-700">
+                                        <Key size={12} className="text-green-500 fill-current" />
+                                        <span className="text-gray-400">Client Public Key</span>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
