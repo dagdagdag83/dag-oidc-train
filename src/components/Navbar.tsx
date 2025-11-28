@@ -6,9 +6,8 @@ const sections = [
     { id: 'jwt', label: 'JWT' },
     { id: 'scopes', label: 'Scopes & Claims' },
     { id: 'crypto', label: 'Crypto Core' },
-    { id: 'mle', label: 'Finnish Weirdness' },
-    { id: 'par', label: 'PAR' },
-    { id: 'sro', label: 'SRO' },
+    { id: 'fapi', label: 'FAPI2' },
+    { id: 'checklist', label: 'Checklist' },
     { id: 'summary', label: 'Debrief' },
 ];
 

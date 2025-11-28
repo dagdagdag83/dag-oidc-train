@@ -17,10 +17,9 @@ import {
 import Section from './components/Section';
 import Card from './components/Card';
 import JwtVisualizer from './components/JwtVisualizer';
-import FinnishWeirdness from './components/FinnishWeirdness';
-import ParSection from './components/ParSection';
-import SroSection from './components/SroSection';
-import MissionDebrief from './components/MissionDebrief';
+import HighSecuritySection from './components/HighSecuritySection';
+import SecurityChecklistSection from './components/SecurityChecklistSection';
+import TrainingDebrief from './components/TrainingDebrief';
 import Navbar from './components/Navbar';
 import JwtSection from './components/JwtSection';
 import ScopesAndClaims from './components/ScopesAndClaims';
@@ -82,7 +81,7 @@ export default function OidcTraining() {
                             Signicat Training
                         </h2>
                         <p className="max-w-2xl mx-auto text-gray-400 mb-12 text-lg">
-                            Fighting for the Users: Identity, Tokens, and the Finnish Protocol
+                            Fighting for the Users: Mastering OIDC and High Security Identity
                         </p>
                         <button
                             onClick={handleEnter}
@@ -458,10 +457,9 @@ export default function OidcTraining() {
                         </div>
                     </Section>
 
-                    <FinnishWeirdness />
-                    <ParSection />
-                    <SroSection />
-                    <MissionDebrief />
+                    <HighSecuritySection />
+                    <SecurityChecklistSection />
+                    <TrainingDebrief />
 
                     {/* FOOTER */}
                     <footer className="py-10 text-center text-gray-600 border-t border-gray-900 bg-black">
