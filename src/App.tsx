@@ -75,7 +75,7 @@ export default function OidcTraining() {
                             OpenID Connect
                         </h1>
                         <h2 className="text-2xl md:text-3xl text-cyan-200 font-bold tracking-[0.5em] mb-8">
-                            Signicat Training
+                            The Identity Grid
                         </h2>
                         <p className="max-w-2xl mx-auto text-gray-400 mb-12 text-lg">
                             Fighting for the Users: Mastering OIDC and High Security Identity
