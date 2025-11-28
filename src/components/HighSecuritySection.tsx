@@ -420,6 +420,12 @@ eyJzdWIiOiJ1c2VyMTIzIiwiYXVkIjoiY2xpZW50IiwiZnRuX3NzbCI6InRydWUifQ.
                         <ArrowRight className="text-yellow-500" /> Sender-Constrained Tokens
                     </h3>
 
+                    <InfoBox title="Current Limitation" variant="yellow" icon={AlertTriangle} className="mb-8">
+                        <p>
+                            <strong>Note:</strong> Signicat does not currently support these methods. They are primarily relevant for securing API-to-API communication, rather than the initial OIDC authentication flow.
+                        </p>
+                    </InfoBox>
+
                     <div className="grid md:grid-cols-12 gap-8">
                         <div className="md:col-span-5">
                             <p className="text-gray-300 mb-6">

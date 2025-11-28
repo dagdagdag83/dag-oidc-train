@@ -31,7 +31,6 @@ import TronBackground from './components/TronBackground';
 
 export default function OidcTraining() {
     const [step, setStep] = useState(0);
-    const [showToken, setShowToken] = useState(false);
     const [cryptoDir, setCryptoDir] = useState('client_to_signicat');
     const [entering, setEntering] = useState(false);
 
@@ -52,8 +51,6 @@ export default function OidcTraining() {
     const handleNextStep = () => {
         if (step < 4) {
             setStep(step + 1);
-        } else {
-            setShowToken(true);
         }
     };
 
@@ -240,18 +237,18 @@ export default function OidcTraining() {
                                 {/* Button container moved to top */}
                                 <div className="mb-6 flex justify-end gap-4 border-b border-gray-800 pb-4">
                                     <button
-                                        onClick={() => { setStep(Math.max(0, step - 1)); setShowToken(false); }}
+                                        onClick={() => { setStep(Math.max(0, step - 1)); }}
                                         className="px-4 py-2 border border-gray-600 hover:bg-gray-800 text-sm"
                                         disabled={step === 0}
                                     >
                                         PREV
                                     </button>
-                                    {!showToken && (
+                                    {step < 4 && (
                                         <button
                                             onClick={handleNextStep}
                                             className="px-6 py-2 bg-cyan-900/50 border border-cyan-500 hover:bg-cyan-500/20 text-cyan-300 text-sm font-bold"
                                         >
-                                            {step === 4 ? "REVEAL TOKEN" : "NEXT STEP >"}
+                                            NEXT STEP &gt;
                                         </button>
                                     )}
                                 </div>
@@ -307,7 +304,7 @@ export default function OidcTraining() {
                                     </div>
                                 </div>
 
-                                {showToken && <JwtVisualizer />}
+                                {step === 4 && <JwtVisualizer />}
                             </div>
                         </div>
                     </Section>
