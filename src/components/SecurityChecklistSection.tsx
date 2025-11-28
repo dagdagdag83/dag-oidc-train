@@ -220,7 +220,7 @@ const SecurityChecklistSection: React.FC = () => {
                         <div
                             key={item.id}
                             onClick={() => setSelectedId(item.id)}
-                            className={`p-4 rounded-lg border cursor-pointer transition-all flex items-center gap-4 group
+                            className={`p-3 md:p-4 rounded-lg border cursor-pointer transition-all flex items-center gap-3 md:gap-4 group
                                 ${selectedId === item.id
                                     ? 'bg-cyan-900/30 border-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.3)]'
                                     : 'bg-gray-900/50 border-gray-700 hover:border-gray-500'

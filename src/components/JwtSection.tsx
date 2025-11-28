@@ -184,31 +184,31 @@ const JwtSection: React.FC = () => {
                             <div
                                 onClick={(e) => { e.stopPropagation(); setActiveTab('jwe'); }}
                                 className={`
-                                    ml-4 md:ml-12 p-6 rounded-2xl border-2 transition-all cursor-pointer relative
+                                    ml-2 md:ml-12 p-4 md:p-6 rounded-2xl border-2 transition-all cursor-pointer relative
                                     ${activeTab === 'jwe' ? 'bg-green-900/20 border-green-500 shadow-[0_0_20px_rgba(74,222,128,0.2)]' : 'bg-black/40 border-green-900/30 hover:border-green-500/50'}
                                 `}
                             >
                                 <div className="flex items-center gap-3 mb-6">
                                     <Lock className="text-green-400" />
                                     <h4 className="text-xl font-bold text-green-400">JWE</h4>
-                                    <span className="text-xs text-green-300/70 uppercase tracking-widest border border-green-500/30 px-2 py-1 rounded">Outer Layer (Encrypted)</span>
+                                    <span className="text-xs text-green-300/70 uppercase tracking-widest border border-green-500/30 px-2 py-1 rounded hidden md:inline">Outer Layer (Encrypted)</span>
                                 </div>
 
                                 {/* 3. JWS CONTAINER (INNER PAYLOAD) */}
                                 <div
                                     onClick={(e) => { e.stopPropagation(); setActiveTab('jws'); }}
                                     className={`
-                                        ml-4 md:ml-12 p-6 rounded-xl border-2 transition-all cursor-pointer
+                                        ml-2 md:ml-12 p-4 md:p-6 rounded-xl border-2 transition-all cursor-pointer
                                         ${activeTab === 'jws' ? 'bg-blue-900/20 border-blue-500 shadow-[0_0_20px_rgba(96,165,250,0.2)]' : 'bg-black/40 border-blue-900/30 hover:border-blue-500/50'}
                                     `}
                                 >
                                     <div className="flex items-center gap-3 mb-4">
                                         <FileSignature className="text-blue-400" />
                                         <h5 className="text-lg font-bold text-blue-400">JWS</h5>
-                                        <span className="text-xs text-blue-300/70 uppercase tracking-widest border border-blue-500/30 px-2 py-1 rounded">Inner Payload (Signed)</span>
+                                        <span className="text-xs text-blue-300/70 uppercase tracking-widest border border-blue-500/30 px-2 py-1 rounded hidden md:inline">Inner Payload (Signed)</span>
                                     </div>
 
-                                    <div className="font-mono text-xs md:text-sm text-blue-200 bg-blue-950/50 p-4 rounded border border-blue-500/20">
+                                    <div className="font-mono text-xs md:text-sm text-blue-200 bg-blue-950/50 p-4 rounded border border-blue-500/20 overflow-x-auto">
                                         {`{ "sub": "1234567890", "name": "John Doe", "admin": true }`}
                                     </div>
                                 </div>
@@ -219,8 +219,8 @@ const JwtSection: React.FC = () => {
                         <div
                             onClick={() => setActiveTab('nested')}
                             className={`
-                                absolute -right-4 top-1/2 -translate-y-1/2 rotate-90 md:rotate-0 md:top-8 md:right-8 md:translate-y-0
-                                px-4 py-2 bg-orange-900/80 border border-orange-500 text-orange-300 text-xs font-bold uppercase tracking-widest rounded cursor-pointer hover:bg-orange-800 transition-all
+                                absolute right-0 top-0 -translate-y-1/2 md:rotate-0 md:top-8 md:right-8 md:translate-y-0
+                                px-2 py-1 md:px-4 md:py-2 bg-orange-900/80 border border-orange-500 text-orange-300 text-[10px] md:text-xs font-bold uppercase tracking-widest rounded cursor-pointer hover:bg-orange-800 transition-all
                                 ${activeTab === 'nested' ? 'ring-2 ring-orange-400 shadow-[0_0_15px_rgba(249,115,22,0.4)]' : ''}
                             `}
                         >

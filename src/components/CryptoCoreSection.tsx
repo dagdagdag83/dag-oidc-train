@@ -16,7 +16,7 @@ const CryptoCoreSection: React.FC = () => {
         <Section title="The Crypto Core" color="yellow" id="crypto">
             <div className="max-w-6xl mx-auto w-full">
                 <div className="text-center mb-12">
-                    <p className="text-xl text-gray-300">Before we dive into the Finnish lakes, we must have a quick crypto lesson!</p>
+                    <p className="text-xl text-gray-300">Before we dive in further, we must pause for a quick crypto lesson!</p>
                 </div>
 
                 {/* CONCEPT CARDS */}
@@ -59,7 +59,7 @@ const CryptoCoreSection: React.FC = () => {
                     </h3>
 
                     {/* Controls */}
-                    <div className="flex justify-center gap-4 mb-12">
+                    <div className="flex flex-col md:flex-row justify-center gap-4 mb-12">
                         <button
                             onClick={() => setCryptoDir('client_to_signicat')}
                             className={`px-6 py-3 border font-bold transition-all ${cryptoDir === 'client_to_signicat' ? 'bg-pink-900/50 border-pink-400 text-pink-300 shadow-[0_0_15px_rgba(236,72,153,0.3)]' : 'border-gray-700 text-gray-500 hover:border-pink-800'}`}
@@ -75,7 +75,7 @@ const CryptoCoreSection: React.FC = () => {
                     </div>
 
                     {/* Visualization Stage */}
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative px-12">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative px-4 md:px-12">
 
                         {/* Left Actor (Client) */}
                         <div className={`flex flex-col items-center transition-all duration-500 ${cryptoDir === 'client_to_signicat' ? 'scale-110' : 'scale-100 opacity-80'}`}>

@@ -22,7 +22,7 @@ const TerminalBox: React.FC<TerminalBoxProps> = ({ title, content, type = "info"
                 </div>
             </div>
             {/* Changed to whitespace-pre-wrap to handle newlines correctly */}
-            <div className={`${type === 'error' ? 'text-red-400' : 'text-green-400'} whitespace-pre-wrap`}>
+            <div className={`${type === 'error' ? 'text-red-400' : 'text-green-400'} whitespace-pre-wrap overflow-x-auto`}>
                 {content}
             </div>
 

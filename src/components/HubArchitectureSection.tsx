@@ -30,9 +30,9 @@ const HubArchitectureSection: React.FC = () => {
                     </Card>
                 </div>
 
-                <div className="cyber-box p-8 flex flex-col items-center justify-center min-h-[400px] border border-cyan-500/50">
+                <div className="cyber-box p-4 md:p-8 flex flex-col items-center justify-center min-h-[300px] md:min-h-[400px] border border-cyan-500/50 overflow-hidden">
                     {/* Simple Visualization of Hub */}
-                    <div className="relative w-full h-64 flex items-center justify-center">
+                    <div className="relative w-full h-64 flex items-center justify-center scale-75 md:scale-100 origin-center">
                         {/* Hub */}
                         <div className="absolute z-10 w-32 h-32 rounded-full border-4 border-cyan-500 bg-black flex flex-col items-center justify-center shadow-[0_0_30px_rgba(0,243,255,0.3)]">
                             <Shield className="w-12 h-12 text-cyan-400 mb-2" />
@@ -73,7 +73,7 @@ const HubArchitectureSection: React.FC = () => {
                             <line x1="60%" y1="50%" x2="80%" y2="80%" stroke="#00f3ff" strokeWidth="1" opacity="0.5" />
                         </svg>
                     </div>
-                    <div className="mt-8 text-center text-sm text-cyan-300">
+                    <div className="mt-4 md:mt-8 text-center text-sm text-cyan-300 px-4">
                         "The Abstraction Layer for Digital Identity."
                     </div>
                 </div>

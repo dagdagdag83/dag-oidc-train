@@ -73,15 +73,23 @@ const OidcFlowSection: React.FC = () => {
                             <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 ${step === idx ? 'bg-cyan-500 text-black shadow-[0_0_20px_#00f3ff]' : 'bg-gray-800 text-gray-400'}`}>
                                 <s.icon size={20} />
                             </div>
-                            <span className="text-xs font-mono uppercase text-center w-24">{s.label}</span>
+                            <span className="text-xs font-mono uppercase text-center w-24 md:w-24">{s.label}</span>
                         </div>
                     ))}
 
-                    {/* Progress Bar */}
-                    <div className="absolute top-6 left-0 h-1 bg-gray-800 w-full -z-0">
+                    {/* Progress Bar (Desktop Horizontal) */}
+                    <div className="hidden md:block absolute top-6 left-0 h-1 bg-gray-800 w-full -z-0">
                         <div
                             className="h-full bg-cyan-500 transition-all duration-500 ease-out"
                             style={{ width: `${step * 25}%` }}
+                        ></div>
+                    </div>
+
+                    {/* Progress Bar (Mobile Vertical) */}
+                    <div className="md:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-gray-800 -translate-x-1/2 -z-0">
+                        <div
+                            className="w-full bg-cyan-500 transition-all duration-500 ease-out"
+                            style={{ height: `${step * 25}%` }}
                         ></div>
                     </div>
                 </div>
@@ -121,7 +129,7 @@ const OidcFlowSection: React.FC = () => {
                                 <>
                                     <h4 className="font-bold text-lg mb-2">Redirect (Front-channel)</h4>
                                     <p>Client browser is redirected to Signicat.</p>
-                                    <code className="block bg-black/50 p-2 mt-2 text-xs text-green-300 overflow-x-auto">
+                                    <code className="block bg-black/50 p-2 mt-2 text-xs text-green-300 overflow-x-auto whitespace-nowrap">
                                         GET /connect/authorize?response_type=code&client_id=...&scope=openid+profile
                                     </code>
                                 </>

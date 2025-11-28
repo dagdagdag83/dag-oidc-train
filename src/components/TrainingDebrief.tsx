@@ -12,7 +12,7 @@ const TrainingDebrief: React.FC = () => {
     return (
         <Section title="Training Debrief" id="summary" color="blue">
             <div className="max-w-4xl mx-auto">
-                <div className="cyber-box p-8 border border-blue-500/30 bg-blue-900/5">
+                <div className="cyber-box p-4 md:p-8 border border-blue-500/30 bg-blue-900/5">
                     <div className="space-y-8">
                         <div className="flex items-start gap-6">
                             <div className="p-3 bg-blue-900/30 rounded-full border border-blue-500/30 shrink-0">
