@@ -41,9 +41,9 @@ const HighSecuritySection: React.FC = () => {
 
                     <InfoBox title="The Finnish Connection" variant="purple" icon={Shield}>
                         <p>
-                            The <strong>Finnish Trust Network (FTN)</strong> is a prime example. While not explicitly "FAPI 2.0" by name, it enforces some of the same rigorous requirements:
+                            The <strong>Finnish Trust Network (FTN)</strong> is a prime example. While not explicitly "FAPI 2.0" by name, it enforces some of the rigorous requirements:
                             <br />
-                            <span className="font-bold text-white">Request Integrity + Responses Confidentiality.</span>
+                            <span className="font-bold text-white">Request Integrity + Response Confidentiality.</span>
                         </p>
                     </InfoBox>
                 </div>

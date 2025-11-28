@@ -20,7 +20,7 @@ const TrainingDebrief: React.FC = () => {
                             </div>
                             <div>
                                 <h4 className="font-bold text-xl text-blue-100 mb-1">OIDC: The Universal Language</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed">It's an open standard used everywhere. We didn't invent it, we just mastered it.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">It's an open standard used everywhere. Signicat didn't invent it, we just do it really well.</p>
                             </div>
                         </div>
 
@@ -32,7 +32,7 @@ const TrainingDebrief: React.FC = () => {
                             </div>
                             <div>
                                 <h4 className="font-bold text-xl text-yellow-100 mb-1">Certified Excellence</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed">Our solution is officially certified by the OpenID Foundation. We play by the rules.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Signicat's OIDC solution is officially certified by the OpenID Foundation. We play by the rules.</p>
                             </div>
                         </div>
 
@@ -44,7 +44,7 @@ const TrainingDebrief: React.FC = () => {
                             </div>
                             <div>
                                 <h4 className="font-bold text-xl text-red-100 mb-1">High Security Challenge</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed">Balancing user experience with rigorous security requirements (like FAPI) is our specialty.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Balancing user experience with rigorous security requirements (like FAPI2) is our specialty.</p>
                             </div>
                         </div>
 
@@ -56,7 +56,7 @@ const TrainingDebrief: React.FC = () => {
                             </div>
                             <div>
                                 <h4 className="font-bold text-xl text-green-100 mb-1">The Trust Anchor</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed">We bridge the gap between complex eIDs and simple developer APIs.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Signicat bridges the gap between complex eIDs and simple developer APIs.</p>
                             </div>
                         </div>
 
@@ -68,7 +68,7 @@ const TrainingDebrief: React.FC = () => {
                             </div>
                             <div>
                                 <h4 className="font-bold text-xl text-pink-100 mb-1">Future Proofing</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed">Ready for eIDAS 2.0, Digital Wallets, and whatever comes next.</p>
+                                <p className="text-gray-400 text-sm leading-relaxed">Signicat is ready for eIDAS 2.0, Digital Wallets, and whatever comes next.</p>
                             </div>
                         </div>
                     </div>
